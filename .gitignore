@@ -1,7 +1,4 @@
 node_modules
-yarn-error.log
-/yarn.lock
-.replit
 build
 package-lock.json
 /notes
