@@ -22,16 +22,18 @@ input {
 
 .AutoCompeteList {
     color: black;
-    margin-top: 1px;
+    /* border-color: gray; */
     border: solid;
-    border-color: gray;
     border-width: 0px 1px 1px 1px;
     max-height: 200px;
     overflow: auto;
 }
 
 .item {
+    display: flex;
+    align-items: center;
     height: 30px;
+    padding-left: 5px;
 }
 
 .item:hover {

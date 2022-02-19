@@ -1,16 +1,8 @@
 import { SET_ALL_NAMES, SET_FILTERED_LIST_OF_NAMES, SET_INPUT_VALUE } from '../actions/userAction';
 
 const initialState = {
-    fullList: [
-        // { id: 10, name: 'Pasha' },
-        // { id: 10, name: 'Pasha' },
-        // { id: 10, name: 'Pasha' },
-        // { id: 10, name: 'Lucky' },
-        // { id: 10, name: 'Lucky' },
-    ],
-    filteredList: [
-        /* 'Pasha', 'Lucky', 'Vera', 'Pasha', 'Lucky', 'Vera' */
-    ],
+    fullList: [],
+    filteredList: [],
     inputValue: '',
 };
 
