@@ -22,8 +22,7 @@ input {
 
 .AutoCompeteList {
     color: black;
-    /* border-color: gray; */
-    border: solid;
+    border: solid rgb(184, 179, 179);
     border-width: 0px 1px 1px 1px;
     max-height: 200px;
     overflow: auto;

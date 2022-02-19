@@ -15,9 +15,11 @@ export const SearchField = () => {
         if (text) {
             const newList = fullList
                 .map((item) => item.name)
-                .filter((item) => text.toUpperCase() === item.slice(0, text.length).toUpperCase())
+                .filter((item) => item.toUpperCase().startsWith(text.toUpperCase()))
                 .sort();
             dispatch(setFilteredListOfNames(newList));
+        } else {
+            dispatch(setFilteredListOfNames([]));
         }
         dispatch(setInputValue(text));
     };
@@ -28,7 +30,7 @@ export const SearchField = () => {
                 placeholder="Search user name"
                 type="text"
                 onFocus={focusHandler}
-                onChange={(event) => inputHandler(event.currentTarget.value)}
+                onChange={(e) => inputHandler(e.currentTarget.value)}
                 onBlur={() => setTimeout(() => dispatch(setFilteredListOfNames([])), 100)}
                 value={inputValue}
             ></input>

@@ -15,7 +15,6 @@ export function setListNames() {
     return async (dispatch) => {
         try {
             const res = await getUserNames();
-
             dispatch(receiveReq(res.data));
         } catch (error) {
             console.log(error);
