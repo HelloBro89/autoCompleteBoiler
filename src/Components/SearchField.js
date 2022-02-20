@@ -4,7 +4,7 @@ import { setListNames, setInputValue, setFilteredListOfNames } from '../redux/ac
 
 export const SearchField = () => {
     const dispatch = useDispatch();
-    const { fullList, inputValue, filteredList } = useSelector((state) => state.users);
+    const { fullList, inputValue, filteredList } = useSelector((state) => state.appData);
 
     const focusHandler = () => {
         if (fullList.length) return;
@@ -38,8 +38,11 @@ export const SearchField = () => {
             {filteredList.length ? (
                 <div className="AutoCompeteList">
                     {filteredList.map((item, ind) => (
-                        <div key={ind} onClick={() => inputHandler(item)} className="item">
-                            {item}
+                        <div key={ind} onClick={(e) => dispatch(setInputValue(item))} className="item">
+                            <div>
+                                <span>{item.slice(0, inputValue.length)}</span>
+                                {item.slice(inputValue.length)}
+                            </div>
                         </div>
                     ))}
                 </div>

@@ -33,8 +33,13 @@ input {
     align-items: center;
     height: 30px;
     padding-left: 5px;
+    cursor: default;
 }
 
 .item:hover {
     background-color: gray;
+}
+
+span {
+    font-weight: bolder;
 }
