@@ -7,6 +7,7 @@
 /****************************** for SEARCH comp  ******************************/
 
 .container {
+    background-color: red;
     margin-left: auto;
     margin-right: auto;
     width: 256px;

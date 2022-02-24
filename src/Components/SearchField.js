@@ -14,7 +14,7 @@ export const SearchField = () => {
     const inputHandler = (text) => {
         if (text) {
             const newList = fullList
-                .map((item) => item.name)
+                .map((item) => item.username)
                 .filter((item) => item.toUpperCase().startsWith(text.toUpperCase()))
                 .sort();
             dispatch(setFilteredListOfNames(newList));
