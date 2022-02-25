@@ -1,9 +1,10 @@
-import { SET_ALL_NAMES, SET_FILTERED_LIST_OF_NAMES, SET_INPUT_VALUE } from '../actions/userAction';
+import { SET_ALL_NAMES, SET_FILTERED_LIST_OF_NAMES, SET_INPUT_VALUE, SET_CURRENT_FOCUS } from '../actions/userAction';
 
 const initialState = {
     fullList: [],
     filteredList: [],
     inputValue: '',
+    currentFocus: -1,
 };
 
 function articlesReducer(state = initialState, action) {
@@ -16,6 +17,9 @@ function articlesReducer(state = initialState, action) {
 
         case SET_INPUT_VALUE:
             return { ...state, inputValue: action.payload };
+
+        case SET_CURRENT_FOCUS:
+            return { ...state, currentFocus: action.payload };
 
         default:
             return state;

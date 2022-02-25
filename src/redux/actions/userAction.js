@@ -3,6 +3,7 @@ import { getUserNames } from '../../requests/requests';
 export const SET_ALL_NAMES = 'SET_ALL_NAMES';
 export const SET_FILTERED_LIST_OF_NAMES = 'SET_FILTERED_LIST_OF_NAMES';
 export const SET_INPUT_VALUE = 'SET_INPUT_VALUE';
+export const SET_CURRENT_FOCUS = 'SET_CURRENT_FOCUS';
 
 export function receiveReq(names) {
     return {
@@ -33,5 +34,11 @@ export function setInputValue(text) {
     return {
         type: SET_INPUT_VALUE,
         payload: text,
+    };
+}
+export function setCurrentFocus(value) {
+    return {
+        type: SET_CURRENT_FOCUS,
+        payload: value,
     };
 }

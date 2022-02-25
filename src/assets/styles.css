@@ -43,3 +43,12 @@ input {
 span {
     font-weight: bolder;
 }
+
+.isActive {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding-left: 5px;
+    cursor: default;
+}
